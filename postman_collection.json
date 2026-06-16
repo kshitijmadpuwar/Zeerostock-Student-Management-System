@@ -1,0 +1,140 @@
+{
+  "info": {
+    "name": "Zeerostock Student Management API",
+    "_postman_id": "zeerostock-sms-v1",
+    "description": "Complete REST API collection for the Student Management System.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000/api" },
+    { "key": "studentId", "value": "1" },
+    { "key": "markId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/health"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Students",
+      "item": [
+        {
+          "name": "List Students (paginated)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/students?page=1&limit=10",
+              "host": ["{{baseUrl}}/students"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" },
+                { "key": "search", "value": "", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Student by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/students/{{studentId}}"
+          }
+        },
+        {
+          "name": "Create Student",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/students",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Alice\",\n  \"last_name\": \"Johnson\",\n  \"email\": \"alice.johnson@example.com\",\n  \"phone\": \"+91 9876543210\",\n  \"date_of_birth\": \"2002-05-15\",\n  \"enrollment_date\": \"2023-08-01\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Student",
+          "request": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/students/{{studentId}}",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Alicia\",\n  \"phone\": \"+91 9876540000\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Student",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/students/{{studentId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Marks",
+      "item": [
+        {
+          "name": "Get Marks for Student",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/students/{{studentId}}/marks"
+          }
+        },
+        {
+          "name": "Add Mark",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/students/{{studentId}}/marks",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subject_id\": 1,\n  \"marks\": 78.5,\n  \"max_marks\": 100,\n  \"exam_type\": \"Midterm\",\n  \"exam_date\": \"2024-03-15\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Mark",
+          "request": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/marks/{{markId}}",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marks\": 85,\n  \"exam_type\": \"Final\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Mark",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/marks/{{markId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Subjects",
+      "item": [
+        {
+          "name": "List All Subjects",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/subjects"
+          }
+        }
+      ]
+    }
+  ]
+}
