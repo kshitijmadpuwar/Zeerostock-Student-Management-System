@@ -1,8 +1,32 @@
 # Zeerostock — Student Management System
 
 A full-stack Student Management System built with Node.js, PostgreSQL, and React.js.
-
+Live Demo: https://zeerostock-student-management-system-6znaqtlto.vercel.app/students/new
+Backend API: https://zeerostock-student-management-system.onrender.com
+Demo Video:
 ---
+What This Project Does
+
+This is a Student Management System where you can:
+Add, edit, and delete students
+Record marks for each student across multiple subjects
+View each student's performance with average score and pass/fail status
+Search students by name or email
+Browse through paginated results
+
+
+Screenshots
+
+Frontend:
+<img width="1920" height="1080" alt="Screenshot (427)" src="https://github.com/user-attachments/assets/3cec48c1-db7d-44c9-80ae-0d74edbf3980" />
+<img width="1920" height="1080" alt="Screenshot (426)" src="https://github.com/user-attachments/assets/cdca7a33-cf21-4d33-9964-f779f34cd771" />
+
+
+Backend :
+<img width="1920" height="1080" alt="Screenshot (428)" src="https://github.com/user-attachments/assets/d8b72b7d-49c5-4c17-8a48-7e030f24e3c4" />
+
+Database :
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/353dcc65-853d-4ed8-9fa6-f44b4dea5de2" />
 
 ## Tech Stack
 
