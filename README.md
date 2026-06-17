@@ -162,7 +162,7 @@ students 1──* marks *──1 subjects
 3. Marks are on a 0–100 scale by default; `max_marks` can be overridden per row.
 4. Search is case-insensitive and matches on first name, last name, or email.
 
----<img width="1920" height="1080" alt="Screenshot (427)" src="https://github.com/user-attachments/assets/d75e3596-8ad0-4c10-923d-cc60e553da8f" />
+---
 
 
 ## Postman Collection
