@@ -1,4 +1,4 @@
-# Zeerostock — Student Management System
+# Zeerostock — Student Management System 
 
 A full-stack Student Management System built with Node.js, PostgreSQL, and React.js.         
 Live Demo: https://zeerostock-student-management-system-6znaqtlto.vercel.app/students/new       
